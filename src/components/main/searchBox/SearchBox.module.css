@@ -1,0 +1,27 @@
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primaryLightColor);
+  max-width: 900px;
+  border-radius: 25px;
+  padding: 6px 10px;
+  min-width: 900px;
+}
+.inputWrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 15px;
+  background-color: transparent;
+}
+
+.imgForInput img {
+  width: 25px;
+  cursor: pointer;
+}
+.wrapper p {
+  font-size: 11px;
+  text-align: center;
+  margin: 15px 0px;
+}

@@ -1,0 +1,103 @@
+#Dark .sideBar{
+  --bgColor:#110420;
+  --itemColor:#fff;
+}
+
+
+.sideBar {
+  background-color: #eceaea;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px 10px;
+  min-width: 60px;
+}
+.sideBarExtended {
+  min-width: 200px;
+}
+.iconeMenu {
+  cursor: pointer;
+}
+.sideBar img {
+  width: 25px;
+}
+.topMenu {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 20px;
+  margin-left: 10px;
+}
+
+.newChat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dfdada;
+  align-self: flex-start;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  color: #6e6d6d;
+}
+
+.newChat img {
+  width: 18px;
+}
+.recentSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+.recentText {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 7px 3px;
+  align-self: flex-start;
+  transition: all ease 0.2s;
+}
+.recentText > * {
+  margin-right: 5px;
+}
+.recentText img {
+  width: 20px;
+}
+.recentSection > p {
+  font-weight: 500;
+  font-size: 17px;
+}
+.recentText:hover {
+  background-color: #dfdada;
+  padding: 7px 3px;
+  border-radius: 10px;
+}
+.bottomMenu {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 15px;
+}
+.bottomMenuChild {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}

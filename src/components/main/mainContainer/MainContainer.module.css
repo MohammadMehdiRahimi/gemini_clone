@@ -1,0 +1,36 @@
+.wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+}
+.hellow p:nth-child(1) {
+  background: -webkit-linear-gradient(
+    16deg,
+    #4285f4 0,
+    #9b72cb 9%,
+    #d96570 20%,
+    #d96570 24%,
+   #9b72cb 35%,
+   #4285f4 44%,
+    #9b72cb 50%,
+    #d96570 56%,
+ #131314 75%,
+    #131314 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 60px;
+}
+.hellow p:nth-child(2) {
+  font-weight: 500;
+  padding: 10px;
+  font-size: 35px;
+  color: #c8c8c8;
+}
+.cartWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
