@@ -1,6 +1,7 @@
 .wrapper {
-  max-width: 900px;
+  max-width: 800px;
   margin: 20px auto;
+  
 }
 .hellow p:nth-child(1) {
   background: -webkit-linear-gradient(

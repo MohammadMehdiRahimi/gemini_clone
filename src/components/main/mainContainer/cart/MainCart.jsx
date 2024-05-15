@@ -5,7 +5,7 @@ export default function MainCart({ data }) {
   return (
     <div className={style.cart}>
       <p>{text}</p>
-      <img src={img} alt="cart image" />
+      {img}
     </div>
   );
 }

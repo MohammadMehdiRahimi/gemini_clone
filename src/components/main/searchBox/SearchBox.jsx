@@ -6,10 +6,10 @@ export default function SearchBox() {
     <div className={style.wrapper}>
       <div className={style.inputWrapper}>
         <input type="text" placeholder="Enter a prompt here ..." />
-        <div className={style.imgForInput}>
-          <img src={assets.gallery_icon} alt="gallery" />
-          <img src={assets.mic_icon} alt="mic" />
-          <img src={assets.send_icon} alt="send" />
+        <div className={style.imgForInput + " " + style.svg}>
+         {assets.gallery_icon}
+        {assets.mic_icon}
+        {assets.send_icon}
         </div>
       </div>
       <p>
