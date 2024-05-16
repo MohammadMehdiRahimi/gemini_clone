@@ -79,14 +79,19 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
-
   transition: all 0.2s ease;
+  max-height: 325px;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+}
+.recentSection::-webkit-scrollbar {
+  display: none;
 }
 .recentSection > p {
   font-weight: 500;
   font-size: 14px;
 }
-.recentSection div:nth-child(2) {
+.active {
   background-color: var(--hoverColor);
 }
 .recentText {

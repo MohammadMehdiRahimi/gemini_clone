@@ -1,7 +1,7 @@
 const initialState = {
   loading: false,
   currentResponse: "",
-  error: "",
+  error: "false",
   history: [],
   inputValue: "",
   showResualt: false,
@@ -21,10 +21,9 @@ const geiminiResponseReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: "",
+        error: "false",
         currentResponse: action.payload,
         history: newElement,
-  
       };
     case "FETCH_FAILURE":
       return {

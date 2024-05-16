@@ -1,13 +1,44 @@
-import React from "react";
+import { useRef, useEffect } from "react";
 import style from "./MainContainer.module.css";
 import { assets } from "../../../assets/assets";
 import MainCart from "./cart/MainCart";
 import { useSelector } from "react-redux";
 export default function MainContainer() {
+  /* ------------------------ gt data from geimini api ----------------------- */
   const geimniResponse = useSelector((state) => state.responseState);
+  const { inputValue, currentResponse, loading, showResualt, error } =
+    geimniResponse;
+  /* ------------------------- apply changens to data ------------------------- */
+  const showResponseSection = useRef();
+  let newTextArray = " ";
+  const getBold = (text) => {
+    const textSplit = text.split("**");
+    for (let i = 0; i < textSplit.length; i++) {
+      i === 0 || i % 2 !== 1
+        ? (newTextArray += textSplit[i])
+        : (newTextArray += "<br/><b>" + textSplit[i] + "</b>");
+    }
 
-  const { inputValue, currentResponse, loading, showResualt } = geimniResponse;
+    return newTextArray.split("*").join(" ");
+  };
 
+  let resualts = "";
+  let out = "";
+  const createNextWordForTypeAnimation = (text) => {
+    const splitedText = text.split(" ");
+    for (let i = 0; i < splitedText.length; i++) {
+      setTimeout(() => {
+        resualts += splitedText[i] + " ";
+        showResponseSection.current.innerHTML = resualts;
+      }, 75 * i);
+    }
+  };
+
+  useEffect(() => {
+    !loading &&
+      showResualt &&
+      createNextWordForTypeAnimation(getBold(currentResponse));
+  }, [currentResponse]);
   const cartData = [
     {
       id: 1,
@@ -48,27 +79,27 @@ export default function MainContainer() {
         <div className={style.resualt}>
           <div className={style.user}>
             <span>
-         
               <img src={assets.user_icon} alt="user" />
             </span>
             <p>{inputValue}</p>
           </div>
           <div className={style.response}>
             <span>
-       
               <img src={assets.gemini_icon} alt="" />
             </span>
-            <p>
+            <div className={style.paragraph}>
               {loading ? (
                 <div className={style.loading}>
                   <hr />
                   <hr />
                   <hr />
                 </div>
+              ) : error == "false" ? (
+                <span ref={showResponseSection}></span>
               ) : (
-                <span> {currentResponse}</span>
+                <span>{`${error}`}</span>
               )}
-            </p>
+            </div>
           </div>
         </div>
       )}

@@ -5,15 +5,15 @@ const fetchRequest = (input) => {
     inputValue: input,
   };
 };
-const fetchSuccess = (text, input) => {
+const fetchSuccess = (text) => {
   return {
     type: "FETCH_SUCCESS",
     payload: text,
- 
   };
 };
 
 const fetchFailure = (error) => {
+  console.log("error is " + error);
   return { type: "FETCH_FAILURE", payload: error };
 };
 const fetchData = (inputs) => {

@@ -1,7 +1,16 @@
+.main {
+  margin: 25px 150px;
+  width: 70%;
+height: 60vh;
+  overflow-y: scroll;
+
+}
+.main::-webkit-scrollbar{
+  display: none;
+}
 .wrapper {
   max-width: 800px;
   margin: 20px auto;
-  max-height: 80vh;
 }
 .hellow p:nth-child(1) {
   background: -webkit-linear-gradient(
@@ -35,10 +44,7 @@
   align-items: center;
   gap: 20px;
 }
-.main {
-  margin: 25px 150px;
-  width: 70%;
-}
+
 .resualt {
   width: 100%;
   margin: 0;
@@ -82,13 +88,14 @@
 .response span {
   flex: 1;
 }
-.response p {
+.paragraph {
   flex: 8;
   max-height: 80vh;
   overflow: scroll;
   color: var(--itemColor);
+  line-height: 30px;
 }
-.response p::-webkit-scrollbar {
+.paragraph::-webkit-scrollbar {
   display: none;
 }
 .loading {
