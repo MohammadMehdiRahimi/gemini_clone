@@ -4,15 +4,14 @@ import { assets } from "../../../assets/assets";
 import { useDispatch, useSelector } from "react-redux";
 import changeTheme from "../../../Redux/changeTheme/themeAction";
 export default function Nav() {
-  const currentTheme = useSelector((state) => state.currentTheme);
+  const currentTheme = useSelector((state) => state.themeState.currentTheme);
+
   const dispatch = useDispatch();
   const darkMode = (ct) => {
     if (ct == "Light") {
       document.querySelector("body").setAttribute("data-theme", "dark");
-      console.log(document.querySelector("body"));
     } else {
       document.querySelector("body").setAttribute("data-theme", "light");
-      console.log(document.querySelector("body"));
     }
   };
   const handelTheme = () => {

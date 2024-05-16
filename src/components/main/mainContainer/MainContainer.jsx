@@ -2,7 +2,12 @@ import React from "react";
 import style from "./MainContainer.module.css";
 import { assets } from "../../../assets/assets";
 import MainCart from "./cart/MainCart";
+import { useSelector } from "react-redux";
 export default function MainContainer() {
+  const geimniResponse = useSelector((state) => state.responseState);
+
+  const { inputValue, currentResponse, loading, showResualt } = geimniResponse;
+
   const cartData = [
     {
       id: 1,
@@ -26,16 +31,47 @@ export default function MainContainer() {
     },
   ];
   return (
-    <div className={style.wrapper}>
-      <div className={style.hellow}>
-        <p>Hello , Dev .</p>
-        <p>How can i help you today?</p>
-      </div>
-      <div className={style.cartWrapper}>
-        {cartData.map((cart) => (
-          <MainCart key={cart.id} data={cart} />
-        ))}
-      </div>
+    <div className={style.main}>
+      {!showResualt ? (
+        <div className={style.wrapper}>
+          <div className={style.hellow}>
+            <p>Hello , Dev .</p>
+            <p>How can i help you today?</p>
+          </div>
+          <div className={style.cartWrapper}>
+            {cartData.map((cart) => (
+              <MainCart key={cart.id} data={cart} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className={style.resualt}>
+          <div className={style.user}>
+            <span>
+         
+              <img src={assets.user_icon} alt="user" />
+            </span>
+            <p>{inputValue}</p>
+          </div>
+          <div className={style.response}>
+            <span>
+       
+              <img src={assets.gemini_icon} alt="" />
+            </span>
+            <p>
+              {loading ? (
+                <div className={style.loading}>
+                  <hr />
+                  <hr />
+                  <hr />
+                </div>
+              ) : (
+                <span> {currentResponse}</span>
+              )}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
