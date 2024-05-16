@@ -32,6 +32,12 @@ const geiminiResponseReducer = (state = initialState, action) => {
         currentResponse: "",
         loading: false,
       };
+    case "NEW_CHAT":
+      return {
+        ...state,
+        loading: false,
+        showResualt: false,
+      };
     default:
       return state;
   }

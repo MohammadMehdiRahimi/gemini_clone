@@ -11,6 +11,11 @@ const fetchSuccess = (text) => {
     payload: text,
   };
 };
+ export const newChat=()=>{
+  return {
+    type:"NEW_CHAT"
+  }
+}
 
 const fetchFailure = (error) => {
   console.log("error is " + error);
@@ -29,3 +34,4 @@ const fetchData = (inputs) => {
 };
 
 export default fetchData;
+

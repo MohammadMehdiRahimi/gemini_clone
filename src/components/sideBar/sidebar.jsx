@@ -3,12 +3,16 @@ import style from "./sidebar.module.css";
 import { assets } from "../../assets/assets";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { newChat } from "../../Redux/geiminiResponse/geiminiResponseAction";
 import fetchData from "../../Redux/geiminiResponse/geiminiResponseAction";
 export default function Sidebar() {
   const [extended, setExtended] = useState(true);
   const { inputValue } = useSelector((state) => state.responseState);
   const [recentArray, setRecentArray] = useState([]);
   const dispatch = useDispatch();
+  const newChats = () => {
+    dispatch(newChat());
+  };
   useEffect(() => {
     const index = recentArray.indexOf(inputValue);
     if (inputValue !== "" && index === -1) {
@@ -55,7 +59,11 @@ export default function Sidebar() {
           className={extended ? style.newChat : style.newChat + " " + style.svg}
         >
           {assets.plus_icon}
-          {extended && <p>New chat </p>}
+          {extended && (
+            <p onClick={newChats} className={style.pNewChat}>
+              New chat{" "}
+            </p>
+          )}
         </div>
 
         <div

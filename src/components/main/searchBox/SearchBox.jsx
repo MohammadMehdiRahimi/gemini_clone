@@ -34,7 +34,7 @@ export default function SearchBox() {
           </span>
         </div>
       </div>
-      <p>
+      <p className={style.detail}>
         Gemini may display inaccurate info, including about people, so
         double-check its responses. Your privacy & Gemini Apps
       </p>

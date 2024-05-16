@@ -1,5 +1,6 @@
 .nav {
-  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,4 +32,14 @@
 .user button svg path {
   fill: var(--itemColor) !important;
   stroke: var(--itemColor) !important;
+}
+@media (min-width:1080px) {
+  .nav{
+    width: 95%;
+  } 
+}
+@media (max-width:1080px) {
+  .nav{
+    width: 90%;
+  } 
 }
