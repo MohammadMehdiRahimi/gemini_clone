@@ -69,6 +69,16 @@ Push to the branch (git push origin feature/your-feature)
 
 Open a Pull Request
 
+
+
+## Images
+<div styles="display=flex;gap=60px;">
+<img src="./src/assets/screenshots/1.png" alt="Gemini Clone Screenshot"  width="400" styles="margin=10px;"/>
+<img src="./src/assets/screenshots/2.png" alt="Gemini Clone Screenshot" width="400"  styles="margin=10px;"/>
+<img src="./src/assets/screenshots/3.png" alt="Gemini Clone Screenshot" width="400" styles="margin=10px;" />
+</div>
+
+
 ## 🌟 A Note from the Developer
 
 
