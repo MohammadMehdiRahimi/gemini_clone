@@ -7,7 +7,7 @@ import bulb_icon from "./bulb_icon.jsx";
 import compass_icon from "./compass_icon.jsx";
 import gallery_icon from "./gallery_icon.jsx";
 import mic_icon from "./mic_icon.jsx";
-import user_icon from "./user_icon.png";
+import user_icon from "./rahimiMinify.jpg";
 import youtube_icon from "./youtube_icon.png";
 import message_icon from "./message_icon.jsx";
 import code_icon from "./code_icon.jsx";

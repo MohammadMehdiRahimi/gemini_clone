@@ -9,7 +9,8 @@
 }
 .nav img {
   border-radius: 50%;
-  width: 45px;
+  width: 50px;
+  height: 50px;
 }
 .nav h1 {
   flex: 10;

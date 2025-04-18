@@ -6,7 +6,7 @@ const initialState = {
   inputValue: "",
   showResualt: false,
 };
-const geiminiResponseReducer = (state = initialState, action) => {
+const geminiResponseReducer = (state = initialState, action) => {
   switch (action.type) {
     case "FETCH_REQ":
       return {
@@ -43,4 +43,4 @@ const geiminiResponseReducer = (state = initialState, action) => {
   }
 };
 
-export default geiminiResponseReducer;
+export default geminiResponseReducer;

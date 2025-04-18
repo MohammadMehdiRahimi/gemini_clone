@@ -1,16 +1,14 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+// store.js
+import { configureStore } from "@reduxjs/toolkit";
 import themeReducer from "./changeTheme/themeReducer";
-import geiminiResponseReducer from "./geiminiResponse/geiminiResponseReducer";
-import {thunk} from "redux-thunk"; // import thunk
-import { composeWithDevTools } from "redux-devtools-extension";
-const rootReducer = combineReducers({
-  themeState: themeReducer,
-  responseState: geiminiResponseReducer,
-});
+import geminiResponseReducer from "./geminiResponse/geminiResponseReducer";
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
+const store = configureStore({
+  reducer: {
+    themeState: themeReducer,
+    responseState: geminiResponseReducer,
+  },
+  devTools: true,
+});
 
 export default store;

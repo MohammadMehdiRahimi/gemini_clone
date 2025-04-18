@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import style from "./SearchBox.module.css";
 import { assets } from "../../../assets/assets";
 import { useSelector, useDispatch } from "react-redux";
-import fetchData from "../../../Redux/geiminiResponse/geiminiResponseAction";
+import fetchData from "../../../Redux/geminiResponse/geiminiResponseAction";
 export default function SearchBox() {
   const [inputValue, setInputValue] = useState("");
   const geiminiResualt = useSelector((state) => state.responseState);

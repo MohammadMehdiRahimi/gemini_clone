@@ -3,8 +3,8 @@ import style from "./sidebar.module.css";
 import { assets } from "../../assets/assets";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { newChat } from "../../Redux/geiminiResponse/geiminiResponseAction";
-import fetchData from "../../Redux/geiminiResponse/geiminiResponseAction";
+import { newChat } from "../../Redux/geminiResponse/geiminiResponseAction";
+import fetchData from "../../Redux/geminiResponse/geiminiResponseAction";
 export default function Sidebar() {
   const [extended, setExtended] = useState(true);
   const { inputValue } = useSelector((state) => state.responseState);
